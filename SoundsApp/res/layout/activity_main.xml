@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.soundsapp.MainActivity" >
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:gravity = "center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/buttonPartyhat"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:onClick = "buttonPartyhatClick"
+            android:src="@drawable/partyhat1" />
+
+        <ImageButton
+            android:id="@+id/buttonBeachball"
+            android:onClick = "buttonBeachballClick"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:src="@drawable/beachball1" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:gravity = "center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/buttonMic"
+            android:onClick = "buttonMicClick"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:src="@drawable/mic" />
+
+        <ImageButton
+            android:id="@+id/buttonBaby"
+            android:onClick = "buttonBabyClick"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:src="@drawable/baby" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:gravity = "center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/buttonFox"
+            android:onClick = "buttonFoxClick"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:src="@drawable/fox1" />
+
+        <ImageButton
+            android:id="@+id/buttonCub"
+            android:onClick = "buttonCubClick"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:src="@drawable/cub1" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:gravity = "center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/buttonStopSounds"
+            android:onClick = "stopAllSounds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stop Sounds" />
+
+    </TableRow>
+
+</LinearLayout>
