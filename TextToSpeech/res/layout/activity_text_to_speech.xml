@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.texttospeech.Main" >
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </TableRow>
+
+    <EditText
+        android:id="@+id/enterText"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+      />
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </TableRow>
+
+    <Button
+        android:id="@+id/speechButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="speak"
+        android:text="Speak Text" />
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/buttonEnglish"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="English" />
+
+        <Button
+            android:id="@+id/buttonCanada"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="Canada" />
+
+    </TableRow>
+
+	<TableRow
+	    android:id="@+id/tableRow4"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" >
+
+	    <Button
+	        android:id="@+id/buttonFrench"
+	        android:layout_width="160dp"
+	        android:layout_height="wrap_content"
+	        android:text="French" />
+
+	    <Button
+	        android:id="@+id/buttonGerman"
+	        android:layout_width="160dp"
+	        android:layout_height="wrap_content"
+	        android:text="German" />
+
+	</TableRow>
+
+</LinearLayout>
