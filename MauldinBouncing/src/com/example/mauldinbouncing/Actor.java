@@ -13,6 +13,11 @@ public class Actor {
 	private int s;
 	private int dx;
 	private int dy;
+	private int w;
+	private int h;
+	
+	private boolean isVisable = true;
+	
 	private Paint paint;
 	
 	private Context aContext;
@@ -27,6 +32,9 @@ public class Actor {
 		paint.setColor(c);
 		dx = 0;
 		dy = 0;
+		
+		w = s;
+		h = s;
 		
 		
 		aContext = context;
@@ -107,7 +115,8 @@ public class Actor {
 	public void setCostume(int cost) {
 		costume = cost;
 		graphic = (BitmapDrawable)aContext.getResources().getDrawable(costume);
-		
+		w = getBitmap().getWidth();
+		h = getBitmap().getHeight();
 	}
 	
 	public Bitmap getBitmap() {
@@ -115,13 +124,60 @@ public class Actor {
 		
 	}
 	
+	public int getHeight() {
+		return h;
+	}
+	
+	public int getWidth() {
+		return w;
+	}
+	
 	public void draw (Canvas c) {
 		c.drawBitmap (getBitmap(), p.x, p.y, paint);
+	}
+	
+	public boolean getVisable() {
+		return isVisable;
+	}
+	public void setVisable(boolean v){
+		isVisable = v;
 	}
 	
 	public void passThrough(Canvas c){
 		if(p.y > c.getHeight ());
 	}
+	
+	public boolean isTouching(Actor a) {
+		boolean result = false;
+		
+		if ((p.x+w > a.getX() && p.x < a.getX()+a.getWidth() 
+				&& (p.y+h > a.getY() && p.y+h < a.getY() + a.getHeight()))){
+			result = true;
+		}
+		
+		
+		return result;
+	}
+	public void bounceOff() {
+		dx = dx * -1;
+		dy = dy * -1;
+	}
+	public void bounceUp() {
+		dy = dy *-1;
+	}
+	public void setHeight(int height) {
+		h = height;
+	}
+	public void setWidth(int width) {
+		w = width;
+	}
+	public void drawRect (Canvas c){
+		if(isVisable) {
+		c.drawRect(p.x, p.y, p.x+w, p.y+h, paint);
+		}
+	
+	}
+	
 	
 	
 	
