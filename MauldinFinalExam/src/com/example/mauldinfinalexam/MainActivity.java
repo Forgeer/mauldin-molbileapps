@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -40,11 +41,7 @@ public class MainActivity extends Activity {
 		return null;
 	}
 	
-	public void getText(){
-		
-		
-	}
-		
+ 
 	
 	
 	
@@ -56,16 +53,32 @@ public class MainActivity extends Activity {
 		return true;
 	}
 	
-	private String getDollars(){
-		double dollar = Double.valueOf(editDollars.getText().toString());
-		double yen = dollar * (getText(editYen)/1.62);
-		double pounds = dollar * (getText(editPounds)/0.0103);
-		String dollarString = String.valueOf(yen, pounds);
-		return dollarString;
+	public void handleClick(View v){
+		EditText text1 = (EditText)findViewById(R.id.editDollars);
+		double valueDollars = Double.parseDouble(String.valueOf(editDollars.getText()));
+		EditText text2 = (EditText)findViewById(R.id.editYen);
+		double valueYen = Double.parseDouble(String.valueOf(editYen.getText()));
+		EditText text3 = (EditText)findViewById(R.id.editPounds);
+		double valuePounds = Double.parseDouble(String.valueOf(editYen.getText()));
+		
 		
 		
 	}
-	
+		
+////	public String dollarsToYen(double yen){
+////		double editYen = valueDollars * 97;
+////		return String.valueOf(editYen);
+//		
+//	}
+//	
+////	public String dollarsToPounds(double pounds){
+////		double editPounds = valueDollars * 0.62;
+////		return String.valueOf(editPounds);
+//		
+//	}
+		
+		
+		
 	
 
 	@Override

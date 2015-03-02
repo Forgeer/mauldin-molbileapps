@@ -31,7 +31,7 @@ public final class R {
         public static final int buttonPounds=0x7f080009;
         public static final int buttonYen=0x7f080006;
         public static final int editDollars=0x7f080002;
-        public static final int editText3=0x7f080008;
+        public static final int editPounds=0x7f080008;
         public static final int editYen=0x7f080005;
         public static final int tableRow1=0x7f080001;
         public static final int tableRow2=0x7f080004;
